@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" type="text/css" href="css/detail.css"/>
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+	<script src="js/zepto/zepto.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/zepto/fx.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+	<title>详情页</title>
+</head>
+<body>
+	<!--盈信计划2467号1期 start-->
+	<header class="help">
+		<a href="index.html"><i class="iconfont icon-fanhui"></i></a>
+		<h3>盈信计划2467号1期</h3>
+		<div class="menu">
+			<i class="iconfont icon-caidan"></i>	
+			<ul>
+				<li>
+					<a href=""><i class="iconfont icon-zhuye"></i><br/>首页</a>
+				</li>
+				<li>
+					<a href=""><i class="iconfont icon-suo"></i><br/>安全保障</a>
+				</li>
+				<li>
+					<a href=""><i class="iconfont icon-chongzhi"></i><br/>我要投资</a>
+				</li>
+				<li>
+					<a href=""><i class="iconfont icon-wode"></i><br/>账户中心</a>
+				</li>
+			</ul>
+		</div>
+		
+	</header>
+	<script src="js/zepto/event.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/zepto/touch.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/zepto/fx_methods.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//手指轻触 icon-caidan 显示下方的ul，其他显示模态窗口
+		$('.icon-caidan').on('tap',function(){
+			$('header').toggleClass('on');	
+		});
+	</script>
+	<!--盈信计划2467号1期 end -->
+	<!--活动加息 start-->
+	<section class="activ">
+		<p>9.2%+0.5%</p>
+		<p>9.7% &nbsp; (9.2+ <em>活动加息</em>0.5%)</p>
+	</section>
+	<!--活动加息 end-->
+	<section class="invest">
+		<div class="invest1">
+			<a href="">1000元起投</a> |
+			<a href="">期限180天</a>
+		</div>
+		<div class="invest2">
+			<span><i class="iconfont icon-chongzhi"></i>省级律所法律支持</span>
+			<span><i class="iconfont icon-chongzhi"></i>省级律所法律支持</span>
+			<span><i class="iconfont icon-chongzhi"></i>省级律所法律支持</span>
+			<span><i class="iconfont icon-chongzhi"></i>省级律所法律支持</span>
+			
+		</div>
+	</section>
+	<!--进度条 start-->
+	<section class="progress">
+		<!--利用progress的做法太复杂了，不知道怎么设置背景色（设置了不起作用）-->
+		<!--<progress min="0" max="100" value="30"></progress>-->
+		<div class="bg" id="bg">
+			<div class="current" id="current"></div>
+			<span >0%</span>
+		</div>
+		<p>
+			<a>已投资 <em id="number"> 37 </em> 人</a>
+			<a href="">剩余可投 <em> 623000 </em> 元</a>
+		</p>
+		<p class="item">
+		<a href="">查看项目详情&gt;</a>	
+		</p>
+	</section>
+	<!--进度条 end-->
+<!--立即投资 start-->
+<section class="reckon">
+	<a href="">收益估算</a>
+	<a href="">立即投资</a>
+	
+</section>
+<!--立即投资 end-->
+<!--进度条 start-->
+<script type="text/javascript">
+	$(function(){
+		//当页面加载完成，进度条执行，
+		//当前的进度为零，假设页面加载完成后进度为50%,当前进度条的宽度不断地增加，
+//		span的0%就是当前宽度的值，且span的left值随着宽度的变化而变化
+		var currentValue = 80;  //当前百分比
+		var span_width = $('#bg span').width()/2;
+		console.log(span)
+		var nunber =$('#number').html(currentValue);
+		var span = $('.progress span').html(currentValue+"%");		
+		var bg = $('#bg').width();
+		var current_width =bg*currentValue / 100; 
+		
+		//获取当前进度条的宽度
+		var span_left =  current_width - span_width;
+		$('#current').animate({width:current_width},500);
+		$('#bg span').animate({left:span_left},500);
+
+
+		
+	})
+</script>
+<!--进度条 end-->
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" type="text/css" href="css/login.css"/>
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+	<script src="js/zepto/zepto.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+	
+	<title>登录页</title>
+</head>
+<body>
+	<!--验证手机号 start-->
+	<header class="help">
+		<a href="index.html"><i class="iconfont icon-fanhui"></i></a>
+		<h3>验证手机号</h3>
+		<div class="menu">
+			<i class="iconfont icon-caidan"></i>	
+			<ul>
+				<li>
+					<a href=""><i class="iconfont icon-zhuye"></i><br/>首页</a>
+				</li>
+				<li>
+					<a href=""><i class="iconfont icon-suo"></i><br/>安全保障</a>
+				</li>
+				<li>
+					<a href=""><i class="iconfont icon-chongzhi"></i><br/>我要投资</a>
+				</li>
+				<li>
+					<a href=""><i class="iconfont icon-wode"></i><br/>账户中心</a>
+				</li>
+			</ul>
+		</div>
+		
+	</header>
+	<script src="js/zepto/event.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/zepto/touch.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/zepto/fx_methods.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//手指轻触 icon-caidan 显示下方的ul，其他显示模态窗口
+		$('.icon-caidan').on('tap',function(){
+			$('header').toggleClass('on');
+
+
+			
+		});
+	</script>
+	
+	<!--验证手机号 end -->
+	<!--请输入手机号码 start-->
+	<section class="phone">
+		<img src="zcm515/img/login_img.png" alt="" />
+		<p>请输入手机号码:</p>
+		<form action="" method="post">
+			<input type="tel" placeholder="请输入手机号码" />
+			<button >下一步</button>
+		</form>
+		<a href="">阅读并同意《招财猫理财用户使用及隐私协议》 </a>
+	</section>
+	<!--请输入手机号码 end-->
+	
+	<!--footer  start-->
+	<footer>
+		<p>
+			<a href="">触屏版</a> |
+			<a href="">电脑版</a> |
+			<a href="">APP下载</a>
+		</p>
+		<p>&copy;2017招财猫理财 浙ICP备14041616号</p>
+	</footer>
+	<!--footer  end-->	
+</body>
+</html>

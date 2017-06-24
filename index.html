@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+	<script src="js/zepto/zepto.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/app.js" type="text/javascript" charset="utf-8"></script>
+	
+	
+	<title>招财猫理财</title>
+</head>
+<body>
+	<!--头部logo start-->
+	<header>
+		<h1><a href="">招财猫理财</a></h1>
+		<div>
+			<a href="login.html">注册</a>
+			| <a href="">登录</a>
+		</div>
+	</header>
+	<!--头部logo end-->
+	<!--导航 start-->
+	<nav>
+		<a href="" class="current">首页</a>
+		<a href="">我要投资</a>
+		<a href="">账户中心</a>
+	</nav>
+	<!--导航 end-->
+	
+	<!--轮播图 start-->
+	<div id='slider' class='swipe'>
+	  	<div class='swipe-wrap'>
+	    		<div><a href=""><img src="img/slider1.jpg" alt="" /></a></div>
+	    		<div><a href=""><img src="img/slider2.jpg" alt="" /></a></div>
+
+	  	</div>
+	  
+	  	<ul class="indirector">
+	  		<li class="current"></li><li></li>
+	  	</ul>
+	</div>
+	<script src="js/swipe.js" type="text/javascript" charset="utf-8"></script>
+
+	
+	<script type="text/javascript">
+		window.mySwipe = Swipe(document.getElementById('slider'),{
+			auto:2000,
+			continuous :true,
+			callback:function(index,ele){
+				console.info(index,ele);
+				
+				$(".indirector li").removeClass("current").eq(index % 2).addClass("current");
+			}
+		});
+	</script>
+	<!--轮播图 end-->
+	<!--首页菜单 sart-->
+	<section class="main">
+		<a href=""><img src="img/home_ico_01.png" alt="" /><span>安全保障</span></a>
+		<a href=""><img src="img/home_ico_02.png" alt="" /><span>关于我们</span></a>
+		<a href=""><img src="img/home_ico_03.png" alt="" /><span>新手指引</span></a>
+		<a href="help.html"><img src="img/home_ico_04.png" alt="" /><span>帮助中心</span></a>
+	</section>
+	
+	<!--首页菜单 end-->
+	<!--热门产品 start-->
+	<section class="hot">
+		<div class="title">
+			<h2><i class="iconfont icon-weibiaoti--"></i>热门产品</h2>
+			<span class="more">更多</span>
+		</div>
+		
+		<ul>
+			<li class="item">
+				<a href="detail.html">
+				<h3>
+					<span>盈信计划2467号1期</span>
+					<p><i class=" money">返现金</i><i class="iconfont icon-vip"></i>
+					</p>	
+				</h3>
+				<div class="data">
+					<div><em>9.2%</em>+0.5</div>
+					<div><p><em>180</em>天</p>投资期限</div>
+					<!--等待完善   -->
+					<div><em>37%</em></div>
+				</div>
+				</a>
+			</li>
+			<li class="item">
+				<h3>
+					<span>助启计划2365号9期</span>
+					<p><i class=" money">返现金</i><i class="iconfont icon-vip"></i>
+					</p>	
+				</h3>
+				<div class="data">
+					<div><em>11%</em>+0.5</div>
+					<div><p><em>365</em>天</p>投资期限</div>
+					<!--等待完善   -->
+					<div><em>37%</em></div>
+				</div>
+			</li>
+			<li class="item">
+				<h3>
+					<span>盈信计划2268号2期</span>
+					<p><i class=" money">返现金</i><i class="iconfont icon-vip"></i>
+					</p>	
+				</h3>
+				<div class="data">
+					<div><em>9.2%</em>+0.5</div>
+					<div><p><em>300</em>天</p>投资期限</div>
+					<!--等待完善   -->
+					<div><em>37%</em></div>
+				</div>
+			</li>
+		</ul>
+	</section>
+	
+	<!--热门产品 end-->
+	<!--企业动态 start-->
+	<section class="news">
+		<h2><i class="iconfont icon-artboard13"></i>企业动态</h2>
+		<ul>
+			<li>
+				<a href=""><img src="img/news20170310144045_植树节专享标题.jpg" alt="" /></a>
+				<div>
+					<h3>春树梦想 植树专享</h3>
+					<p><span>来源：招财猫理财</span><span>2017-3-10</span></p>
+				</div>
+			</li>
+			<li>
+				<a href=""><img src="zcm515/img/news20170309133946_工资日标题.jpg" alt="" /></a>
+				<div>
+					<h3>每月工资日 理财自家薪</h3>
+					<p><span>来源：招财猫理财</span><span>2017-3-10</span></p>
+				</div>
+			</li>
+			<li>
+				<a href=""><img src="img/news20170310144045_植树节专享标题.jpg" alt="" /></a>
+				<div>
+					<h3>春树梦想 植树专享</h3>
+					<p><span>来源：招财猫理财</span><span>2017-3-10</span></p>
+				</div>
+			</li>
+		</ul>
+		
+		
+	</section>
+	<!--企业动态 end-->
+	<!--footer  start-->
+	<footer>
+		<p>
+			<a href="">触屏版</a> |
+			<a href="">电脑版</a> |
+			<a href="">APP下载</a>
+		</p>
+		<p>&copy;2017招财猫理财 浙ICP备14041616号</p>
+	</footer>
+	<!--footer  end-->
+	
+</body>
+</html>
